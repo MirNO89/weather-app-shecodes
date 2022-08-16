@@ -1,0 +1,76 @@
+body {
+  font-family: "Barlow", sans-serif;
+}
+h1 {
+  color: #7a1e68;
+  font-weight: 900;
+}
+h2 {
+  color: #6f93f0;
+}
+h3 {
+  color: #c3bdd8;
+}
+li {
+  list-style: none;
+}
+.todays-conditions {
+  margin: 0 0 10px;
+  padding: 0;
+  color: #6f93f0;
+}
+.weather-icon {
+  height: 64px;
+  width: 64px;
+  margin-right: 10px;
+}
+
+.temperature {
+  color: #6f93f0;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1;
+}
+.weather-today {
+  color: #6f93f0;
+  border: 1px solid #dadde1;
+  padding: 15px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 600px;
+}
+.day-one {
+  color: #6f93f0;
+  border: 1px solid #dadde1;
+  padding: 15px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 600px;
+}
+.day-two {
+  color: #6f93f0;
+  border: 1px solid #dadde1;
+  padding: 15px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 600px;
+}
+.day-three {
+  color: #6f93f0;
+  border: 1px solid #dadde1;
+  padding: 15px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 600px;
+}
+.day-four {
+  color: #6f93f0;
+  border: 1px solid #dadde1;
+  padding: 15px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 600px;
+}
+#condition {
+  text-transform: capitalize;
+}

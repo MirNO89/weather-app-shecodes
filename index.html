@@ -1,12 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SheCodes</title>
-</head>
-<body>
-  
-</body>
+<html>
+  <head>
+    <title>Wireframe to CSS/HTML</title>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+          <div class="col-10">
+      <div class="weather-today">
+        <div class="row">
+          <div class="col-9">
+            <h1></h1>
+            <br />
+            <h2>RIGHT NOW</h2>
+            <ul id="todays-conditions">
+              <li id="todaysTime"></li>
+              <li id="condition"></li>
+            </ul>
+          </div>
+          <div class="col-3">
+            <div class="main-icon">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt="Cloudy icon"
+                class="weather-icon"
+              />
+            </div>
+            <div class="float-centre">
+              <span class="temperature" id="currentC"></span
+              ><span class="units"> <a href="#" id="celsius">°C</a> | <a href="#" id="fahrenheit">°F</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="future-weather">
+        <div class="row">
+          <div class="col-3">
+            <div class="day-one">
+              <p>
+                Monday
+                <br />
+                24°C 🌤
+              </p>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="day-two">
+              <p>
+                Tuesday
+                <br />
+                22°C ⛅️
+              </p>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="day-three">
+              <p>
+                Wednesday
+                <br />
+                27°C ☀️
+              </p>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="day-four">
+              <p>
+                Thursday
+                <br />
+                28°C ☀️
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="search-form" id="searchForm">
+          <div class="row">
+            <div class="col-8">
+              <input
+                type="search"
+                placeholder="Search for a different city.."
+                autofocus="on"
+                autocomplete="off"
+                class="form-control shadow-sm"
+                id="searchField"
+              />
+            </div>
+            <div class="col-4">
+              <input
+                type="submit"
+                value="Go"
+                class="btn btn-outline-info"
+                id="search"
+              />
+              <button id="currentLocation" class="btn btn-outline-info">
+                Your current location
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-2">
+        <div class="favorites">
+          <h3>
+            Favorites⭐️
+          </h3>
+          <ul id="favorite-list">
+            <li>
+              Copenhagen
+            </li>
+            <li>
+              Barcelona
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
 </html>
