@@ -25,7 +25,7 @@ todaysTime.innerHTML = `${day}, ${hours}:${minutes}`;
 function displayWeatherCondition(response) {
   let iconElement = document.querySelector("#icon");
   document.querySelector("h1").innerHTML = response.data.name;
-  document.querySelector("#currentC").innerHTML = Math.round(
+  document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
   document.querySelector("#condition").innerHTML =
@@ -35,6 +35,7 @@ function displayWeatherCondition(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+  celsiusTemperature = response.data.main.temp;
 }
 
 function searchCity(city) {
@@ -63,26 +64,29 @@ function handleSubmit(event) {
   let city = document.querySelector("#searchField").value;
   searchCity(city);
 }
-let searchForm = document.querySelector("#searchForm");
-searchForm.addEventListener("submit", handleSubmit);
+function convertFahrenheit(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+function convertCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+let celsiusTemperature = null;
 
 let currentLocationButton = document.querySelector("#currentLocation");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", convertFahrenheit);
+
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", convertCelsius);
+
+let searchForm = document.querySelector("#searchForm");
+searchForm.addEventListener("submit", handleSubmit);
+
 searchCity("Oslo");
-
-//function changeF(event) {
-// event.preventDefault();
-// let temp = document.querySelector("#currentC");
-// temp.innerHTML = Math.round((18 * 9) / 5 + 32);
-//}
-//function changeC(event) {
-//  event.preventDefault();
-//  let temp = document.querySelector("#currentC");
-//  temp.innerHTML = 18;
-//}
-
-//let tempF = document.querySelector("#fahrenheit");
-//tempF.addEventListener("click", changeF);
-//let tempC = document.querySelector("#celsius");
-//tempC.addEventListener("click", changeC);
