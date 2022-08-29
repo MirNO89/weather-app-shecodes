@@ -5,14 +5,11 @@ h1 {
   color: #7a1e68;
   font-weight: 900;
 }
-h2 {
-  color: #6f93f0;
-}
 h3 {
   color: #c3bdd8;
 }
 ul {
-  margin: 0;
+  margin-top: 20px;
   padding: 0;
 }
 li {
@@ -23,12 +20,6 @@ li {
   padding: 0;
   color: #6f93f0;
 }
-.weather-icon {
-  height: 64px;
-  width: 64px;
-  margin-right: 10px;
-}
-
 .temperature {
   color: #6f93f0;
   font-size: 64px;
@@ -47,15 +38,12 @@ li {
   margin-top: 20px;
   text-align: center;
 }
-#description {
-  text-transform: capitalize;
-}
-.main-icon img {
-  margin-right: 5px;
-  height: 64px;
-  width: 64px;
-}
 .weather-forecast-temperature-min {
   font-size: 14px;
   opacity: 0.6;
 }
+#description {
+  text-transform: capitalize;
+}
+
+
