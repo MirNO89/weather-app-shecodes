@@ -43,37 +43,9 @@ li {
   border-radius: 10px;
   max-width: 600px;
 }
-.day-one {
-  color: #6f93f0;
-  border: 1px solid #dadde1;
-  padding: 15px;
-  margin: 20px auto;
-  border-radius: 10px;
-  max-width: 600px;
-}
-.day-two {
-  color: #6f93f0;
-  border: 1px solid #dadde1;
-  padding: 15px;
-  margin: 20px auto;
-  border-radius: 10px;
-  max-width: 600px;
-}
-.day-three {
-  color: #6f93f0;
-  border: 1px solid #dadde1;
-  padding: 15px;
-  margin: 20px auto;
-  border-radius: 10px;
-  max-width: 600px;
-}
-.day-four {
-  color: #6f93f0;
-  border: 1px solid #dadde1;
-  padding: 15px;
-  margin: 20px auto;
-  border-radius: 10px;
-  max-width: 600px;
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
 }
 #description {
   text-transform: capitalize;
@@ -82,4 +54,8 @@ li {
   margin-right: 5px;
   height: 64px;
   width: 64px;
+}
+.weather-forecast-temperature-min {
+  font-size: 14px;
+  opacity: 0.6;
 }
