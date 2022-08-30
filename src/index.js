@@ -21,7 +21,7 @@ let days = [
 let day = days[now.getDay()];
 todaysTime.innerHTML = `${day}, ${hours}:${minutes}`;
 
-function displayForecast() {
+function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
 
   let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
@@ -49,6 +49,11 @@ function displayForecast() {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
+function getForecast(coordinates) {
+  let apiKey = "a2baf84f083b88654c8b1aba441c30ca";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
 
 //Search Weather
 function displayWeatherCondition(response) {
@@ -69,6 +74,7 @@ function displayWeatherCondition(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+  getForecast(response.data.coord);
 }
 
 function searchCity(city) {
@@ -123,4 +129,3 @@ let searchForm = document.querySelector("#searchForm");
 searchForm.addEventListener("submit", handleSubmit);
 
 searchCity("Oslo");
-displayForecast();
