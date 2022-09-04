@@ -1,12 +1,13 @@
 body {
   font-family: "Barlow", sans-serif;
+  background: linear-gradient(#c9dfec, #ffffff);
 }
 h1 {
   color: #7a1e68;
   font-weight: 900;
 }
 h3 {
-  color: #c3bdd8;
+  color: #8d8e90;
 }
 ul {
   margin-top: 20px;
@@ -22,13 +23,16 @@ li {
 }
 .temperature {
   color: #6f93f0;
-  font-size: 64px;
+  font-size: 74px;
   font-weight: 400;
   line-height: 1;
 }
+.units {
+  vertical-align: top;
+}
 .weather-today {
   color: #6f93f0;
-  border: 1px solid #dadde1;
+  border: 1px solid #8d8e90;
   padding: 15px;
   margin: 20px auto;
   border-radius: 10px;
@@ -45,5 +49,6 @@ li {
 #description {
   text-transform: capitalize;
 }
-
-
+.favorites {
+  margin-top: 20px;
+}

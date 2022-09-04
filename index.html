@@ -27,26 +27,25 @@
           <div class="col-9">
             <h1></h1>
             <ul id="todays-conditions">
-              <li>Last updated: <span id="todaysTime"></span></li>
+              
               <li id="description"></li>
               <li>Humidity: <span id="humidity"></span>%</li>
                 <li>Wind: <span id="wind"></span> m/s</li>
+                <li>Last updated: <span id="todaysTime"></span></li>
             </ul>
           </div>
           <div class="col-3">
+              <span class="temperature" id="temperature"></span
+              ><span class="units" id="celsius">°C</span>
             <div class="main-icon">
               <img
                 src=""
                 alt="Cloudy icon"
                 class="weather-icon"
                 id="icon"
+                height="130"
               />
             </div>
-            <div class="float-centre">
-              <span class="temperature" id="temperature"></span
-              ><span class="units"> <a href="#" id="celsius">°C</a> | <a href="#" id="fahrenheit">°F</a></span>
-            </div>
-            
           </div>
         </div>
         <div class="weather-forecast" id="forecast">
@@ -84,14 +83,6 @@
           <h3>
             Favorites⭐️
           </h3>
-          <ul id="favorite-list">
-            <li>
-              Copenhagen
-            </li>
-            <li>
-              Barcelona
-            </li>
-          </ul>
         </div>
       </div>
       <p id="footer"><a href="https://github.com/MirNO89/weather-app-shecodes" target="_blank">Open-source code</a> by Miriam MK</p>
